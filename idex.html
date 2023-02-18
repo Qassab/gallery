@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+    <script src="">
+        const showDescriptions = document.querySelectorAll(".btn");
+const descriptions = document.querySelectorAll(".more");
+
+showDescriptions.forEach((showDescription, index) => {
+  showDescription.addEventListener("click", () => {
+    showDescription.style.display = "none";
+    descriptions[index].style.display = "block";
+  });
+  descriptions[index].addEventListener("mouseout", () => {
+    setTimeout(() => {
+      showDescription.style.display = "block";
+      descriptions[index].style.display = "none";
+    }, 2000);
+  });
+});
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-card first-card">
+
+            <h1>Gallery</h1>
+            <p>This is a simple HTML , CSS and JavaScript project that creates a gallery of images with a description for all previous projects I have created</p>
+        </div>
+       
+        <div class="image-card">
+            <div class="overlay"></div>
+            <img src="/img/public-figure.png" alt="public-figure">
+            <div class="content">
+            <h3 class="title">Public Figure</h3>
+            <p class="description">This is a simple HTML , CSS and  <button class="btn">More</button></p><p class="more">JavaScript project that creates a public-figure website  <a href="https://ali-mrbeast.netlify.app/">Go to website</a></p></div>
+        </div>
+        <div class="image-card">
+            <div class="overlay"></div>
+            <img src="/img/game.png" alt="game">
+            <div class="content">
+            <h3 class="title">Matching Game</h3>
+            <p class="description">This is a memory-matching <button class="btn">More...</button> </p><p class="more">game built with HTML, CSS, and JavaScript. The game consists of 8 pairs of cards, and the objective is to match all the pairs by flipping the cards over. The game has a Reset button to shuffle the cards again.<a href="https://ali-matching-game.netlify.app/">Go to website</a></p></div>
+        </div>
+        <div class="image-card">
+            <div class="overlay"></div>
+            <img src="/img/website.png" alt="website">
+            <div class="content">
+            <h3 class="title">Website</h3>
+            <p class="description">This is a simple HTML , <button class="btn">More</button></p><p class="more"> CSS and JavaScript project that creates a website talking about me and why I would like to move into a career as a web developer <a href="https://ali-q-website.netlify.app/">Go to website</a></p></div>
+        </div>
+        <div class="image-card">
+            <div class="overlay"></div>
+            <img src="/img/movie.png" alt="movie">
+            <div class="content">
+            <h3 class="title">Movies</h3>
+            <p class="description">A simple web app to <button class="btn">More</button> </p><p class="more"> display a list of movies and their details, as well as the ability to add new movies.
+
+ <a href="https://ali-movie.netlify.app/">Go to website</a></p></div>
+        </div>
+       
+    </div>
+    <script src="script.js">
+       
+
+    </script>
+</body>
+</html>
